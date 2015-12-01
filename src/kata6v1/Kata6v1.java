@@ -17,7 +17,7 @@ public class Kata6v1 {
             }
         }
         );
-        Histogram<String> peso = builder.build(new Attribute<Person, Float>() {
+        Histogram<Float> peso = builder.build(new Attribute<Person, Float>() {
             @Override
             public Float get(Person person) {
                 return person.getPeso();

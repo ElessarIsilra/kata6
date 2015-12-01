@@ -13,8 +13,8 @@ public class MailReader {
         ArrayList <Person> people = new ArrayList<>();
         Class.forName("org.sqlite.JDBC");
         Connection cn = DriverManager.getConnection("jdbc:sqlite:KATA.sDB");
-        Statement st= cn.createStatement();
-        ResultSet rs= st.executeQuery("SELECT * FROM PEOPLE");
+        Statement st = cn.createStatement();
+        ResultSet rs= st.executeQuery("SELECT * FROM people");
         while(rs.next()){
             int id = rs.getInt("id");
             String name = rs.getString("name");
